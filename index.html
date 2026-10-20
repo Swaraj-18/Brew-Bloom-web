@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Bloom — Good Coffee. Slow Moments.</title>
+  <meta name="description" content="Brew & Bloom is a premium specialty café serving artisan coffee, signature drinks, fresh pastries, and light bites in a serene, warm atmosphere.">
+  <meta name="theme-color" content="#3B2923">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%23B77B4A' d='M8 10h12v7a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6v-7z'/><path fill='%237A8667' d='M20 12h2a3 3 0 0 1 3 3v0a3 3 0 0 1-3 3h-2v-6z'/><path fill='%237A8667' d='M6 25h16a1 1 0 0 1 0 2H6a1 1 0 0 1 0-2z'/><path stroke='%23B77B4A' stroke-width='1.5' stroke-linecap='round' d='M11 6c0 1.5 1 2 1 3m3-3c0 1.5 1 2 1 3'/></svg>">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessible Skip to Content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <!-- Brand Logo & Wordmark -->
+      <a href="#hero" class="brand-logo" aria-label="Brew and Bloom Home">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <path d="M12 16C12 14.8954 12.8954 14 14 14H24C25.1046 14 26 14.8954 26 16V22C26 25.3137 23.3137 28 20 28V28C16.6863 28 14 25.3137 14 22V16H12Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M26 17H27.5C28.8807 17 30 18.1193 30 19.5V19.5C30 20.8807 28.8807 22 27.5 22H26" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M11 30H29" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- Steam Lines -->
+          <path class="steam-line steam-1" d="M16 11C16 9.5 17 9 17 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path class="steam-line steam-2" d="M20 11C20 9.5 21 9 21 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path class="steam-line steam-3" d="M24 11C24 9.5 25 9 25 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Brew &amp; Bloom</span>
+          <span class="brand-sub">Specialty Café</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#story" class="nav-link">Our Story</a></li>
+          <li class="nav-item"><a href="#signature" class="nav-link">Favourites</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Kind Words</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA & Mobile Toggle -->
+      <div class="header-actions">
+        <a href="#reservations" class="btn btn-primary nav-cta">Reserve a Table</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div class="mobile-drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <span class="drawer-brand-name">Brew &amp; Bloom</span>
+        <span class="drawer-brand-tag">Good Coffee. Slow Moments.</span>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="#hero" class="drawer-nav-link active">Home</a></li>
+      <li><a href="#story" class="drawer-nav-link">Our Story</a></li>
+      <li><a href="#signature" class="drawer-nav-link">Favourites</a></li>
+      <li><a href="#menu" class="drawer-nav-link">Menu</a></li>
+      <li><a href="#experience" class="drawer-nav-link">Experience</a></li>
+      <li><a href="#testimonials" class="drawer-nav-link">Kind Words</a></li>
+      <li><a href="#reservations" class="drawer-nav-link">Reservations</a></li>
+      <li><a href="#contact" class="drawer-nav-link">Visit &amp; Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="#reservations" class="btn btn-primary btn-block drawer-cta">Reserve a Table</a>
+      <div class="drawer-meta">
+        <p>123 Coffee Lane, Pune</p>
+        <p>Mon–Fri: 8am–9pm | Sat–Sun: 9am–10pm</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+
+    <!-- 4. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <!-- Hero Text Column -->
+        <div class="hero-content reveal-fade-up">
+          <div class="eyebrow-badge">
+            <svg class="eyebrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M8 2a6 6 0 0 1 6 6c0 3.314-2.686 6-6 6a6 6 0 0 1-6-6c0-3.314 2.686-6 6-6z"/>
+              <path d="M8 5v6M5 8h6"/>
+            </svg>
+            <span>YOUR NEIGHBORHOOD COFFEE ESCAPE</span>
+          </div>
+
+          <h1 class="hero-title">
+            Your Daily Dose of <span class="text-italic serif-accent">Beautiful Moments.</span>
+          </h1>
+
+          <p class="hero-description">
+            Thoughtfully brewed coffee, freshly baked delights, and a cozy corner to slow down, reconnect, and enjoy the little things.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn btn-primary">
+              <span>Explore Our Menu</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#reservations" class="btn btn-secondary">
+              Reserve a Table
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Arabica Specialty Beans</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">Daily</span>
+              <span class="stat-label">Artisan Oven Baking</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">4.9 ★</span>
+              <span class="stat-label">Community Love</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Column -->
+        <div class="hero-visual reveal-fade-left">
+          <div class="hero-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80" 
+              alt="Artisan cup of latte with velvety foam on a rustic wooden café table" 
+              class="hero-img"
+              width="600"
+              height="680"
+              onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+            >
+            <!-- Decorative Badge -->
+            <div class="hero-floating-badge" aria-label="Brand badge">
+              <div class="badge-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </div>
+              <div class="badge-text">
+                <span class="badge-main">Freshly brewed.</span>
+                <span class="badge-sub">Always heartfelt.</span>
+              </div>
+            </div>
+
+            <!-- Decorative corner accent -->
+            <div class="hero-accent-card">
+              <span class="accent-tag">Open Today</span>
+              <span class="accent-time">8:00 AM – 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Signature Favourites -->
+    <section class="section signature-section" id="signature">
+      <div class="section-container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-eyebrow">Handpicked Delights</span>
+          <h2 class="section-title">Made with Love. Served Fresh.</h2>
+          <p class="section-subtitle">A few little favourites worth slowing down for.</p>
+        </div>
+
+        <div class="signature-grid">
+          <!-- Product Card 1 -->
+          <article class="product-card reveal-fade-up" style="--stagger: 0.1s;">
+            <div class="product-media">
+              <img 
+                src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" 
+                alt="Bloom Latte with delicate rosetta latte art"
+                class="product-image"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <span class="product-category-tag">Signature Drink</span>
+            </div>
+            <div class="product-content">
+              <div class="product-header">
+                <h3 class="product-title">Bloom Latte</h3>
+                <span class="product-price">₹180</span>
+              </div>
+              <p class="product-description">
+                Espresso with silky steamed milk and delicate latte art.
+              </p>
+              <div class="product-footer">
+                <span class="product-attribute">Single Origin Roast</span>
+                <button class="card-action-btn" aria-label="Reserve Bloom Latte" onclick="document.getElementById('reservations').scrollIntoView({behavior: 'smooth'})">
+                  Order In-Café
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card reveal-fade-up" style="--stagger: 0.2s;">
+            <div class="product-media">
+              <img 
+                src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80" 
+                alt="Caramel Cloud Cappuccino with velvet microfoam"
+                class="product-image"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <span class="product-category-tag">Hot Coffee</span>
+            </div>
+            <div class="product-content">
+              <div class="product-header">
+                <h3 class="product-title">Caramel Cloud Cappuccino</h3>
+                <span class="product-price">₹200</span>
+              </div>
+              <p class="product-description">
+                Rich espresso topped with velvety foam and caramel notes.
+              </p>
+              <div class="product-footer">
+                <span class="product-attribute">House Caramel Drizzle</span>
+                <button class="card-action-btn" aria-label="Reserve Caramel Cloud Cappuccino" onclick="document.getElementById('reservations').scrollIntoView({behavior: 'smooth'})">
+                  Order In-Café
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card reveal-fade-up" style="--stagger: 0.3s;">
+            <div class="product-media">
+              <img 
+                src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80" 
+                alt="Iced Vanilla Brew in a chilled glass with swirling milk"
+                class="product-image"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <span class="product-category-tag">Cold Brew</span>
+            </div>
+            <div class="product-content">
+              <div class="product-header">
+                <h3 class="product-title">Iced Vanilla Brew</h3>
+                <span class="product-price">₹190</span>
+              </div>
+              <p class="product-description">
+                Chilled coffee with smooth vanilla and refreshing milk.
+              </p>
+              <div class="product-footer">
+                <span class="product-attribute">Slow Steeped 18h</span>
+                <button class="card-action-btn" aria-label="Reserve Iced Vanilla Brew" onclick="document.getElementById('reservations').scrollIntoView({behavior: 'smooth'})">
+                  Order In-Café
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card reveal-fade-up" style="--stagger: 0.4s;">
+            <div class="product-media">
+              <img 
+                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" 
+                alt="Flaky Chocolate Hazelnut Croissant fresh from oven"
+                class="product-image"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <span class="product-category-tag">Fresh Bakery</span>
+            </div>
+            <div class="product-content">
+              <div class="product-header">
+                <h3 class="product-title">Chocolate Hazelnut Croissant</h3>
+                <span class="product-price">₹150</span>
+              </div>
+              <p class="product-description">
+                A flaky, buttery pastry filled with chocolate and hazelnut.
+              </p>
+              <div class="product-footer">
+                <span class="product-attribute">Baked Daily at 7 AM</span>
+                <button class="card-action-btn" aria-label="Reserve Croissant" onclick="document.getElementById('reservations').scrollIntoView({behavior: 'smooth'})">
+                  Order In-Café
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-footer-cta reveal-fade-up">
+          <a href="#menu" class="btn btn-primary">
+            <span>View Full Menu</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Our Story Section -->
+    <section class="section story-section" id="story">
+      <div class="section-container">
+        <div class="story-split-layout">
+          <!-- Story Visual with layered composition -->
+          <div class="story-visual reveal-fade-right">
+            <div class="story-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=80" 
+                alt="Barista precisely brewing artisan pour-over coffee"
+                class="story-main-img"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <div class="story-secondary-card">
+                <span class="story-since-year">Est. 2024</span>
+                <span class="story-since-text">Poured with Passion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Story Text Content -->
+          <div class="story-content reveal-fade-left">
+            <span class="section-eyebrow">Our Philosophy</span>
+            <h2 class="section-title">A Little Corner. A Lot of Heart.</h2>
+            <div class="story-body">
+              <p>
+                Brew &amp; Bloom began with a simple idea: good coffee should feel like a little pause in a busy day. Inspired by the ritual of slow mornings, freshly baked pastries, and meaningful conversations, our fictional neighborhood café is designed to make every visit feel special.
+              </p>
+              <p>
+                Whether you stop by for a quiet morning notebook session, a sunny midday catch-up, or an evening unwind with warm tea, our doors are open to celebrate the art of taking things slow.
+              </p>
+            </div>
+
+            <!-- Brand Values List -->
+            <div class="brand-values-grid">
+              <div class="value-item">
+                <div class="value-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                  </svg>
+                </div>
+                <div class="value-text">
+                  <h3 class="value-title">Thoughtfully Brewed</h3>
+                  <p class="value-desc">Ethically sourced, sustainably grown beans roasted with nuance and precision.</p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V18a1 1 0 0 1-2 0v-1.07A6 6 0 0 1 7.07 13H6a1 1 0 0 1 0-2h1.07A6 6 0 0 1 11 7.07V6a1 1 0 0 1 2 0v1.07A6 6 0 0 1 16.93 11H18a1 1 0 0 1 0 2h-1.07A6 6 0 0 1 13 16.93z"/>
+                  </svg>
+                </div>
+                <div class="value-text">
+                  <h3 class="value-title">Freshly Prepared</h3>
+                  <p class="value-desc">Pastries kneaded, proofed, and baked on premise every morning before sunrise.</p>
+                </div>
+              </div>
+
+              <div class="value-item">
+                <div class="value-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <div class="value-text">
+                  <h3 class="value-title">Made for Moments</h3>
+                  <p class="value-desc">Comfortable seating, calm acoustics, and warm smiles that welcome you as family.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="story-actions">
+              <button class="btn btn-secondary" id="open-story-modal-btn">
+                <span>Discover Our Story</span>
+                <svg viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Interactive Digital Menu -->
+    <section class="section menu-section" id="menu">
+      <div class="section-container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-eyebrow">Artisan Selections</span>
+          <h2 class="section-title">Find Your Perfect Cup.</h2>
+          <p class="section-subtitle">From your first morning espresso to your afternoon sweet treat.</p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="menu-filter-bar reveal-fade-up" role="tablist" aria-label="Menu categories">
+          <button class="filter-btn active" data-category="all" role="tab" aria-selected="true" aria-controls="menu-items-grid">
+            <span class="filter-dot"></span>All Items
+          </button>
+          <button class="filter-btn" data-category="hot-coffee" role="tab" aria-selected="false" aria-controls="menu-items-grid">
+            <span class="filter-dot"></span>Hot Coffee
+          </button>
+          <button class="filter-btn" data-category="iced-drinks" role="tab" aria-selected="false" aria-controls="menu-items-grid">
+            <span class="filter-dot"></span>Iced Drinks
+          </button>
+          <button class="filter-btn" data-category="tea-refreshers" role="tab" aria-selected="false" aria-controls="menu-items-grid">
+            <span class="filter-dot"></span>Tea &amp; Refreshers
+          </button>
+          <button class="filter-btn" data-category="bakery-desserts" role="tab" aria-selected="false" aria-controls="menu-items-grid">
+            <span class="filter-dot"></span>Bakery &amp; Desserts
+          </button>
+        </div>
+
+        <!-- Filter Count & Status Message -->
+        <div class="menu-status-bar" aria-live="polite">
+          <span id="menu-counter" class="menu-counter">Showing 15 handcrafted items</span>
+        </div>
+
+        <!-- Menu Items 2-Column Compact Grid -->
+        <div class="menu-items-grid" id="menu-items-grid">
+
+          <!-- HOT COFFEE (5 items) -->
+          <article class="menu-item-row menu-card" data-category="hot-coffee">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Espresso</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹100</span>
+              </div>
+              <p class="menu-item-desc">Bold and concentrated single shot pulled from our house blend with a rich, golden crema.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Hot Coffee</span>
+                <span class="menu-badge-subtle">Intense &amp; Pure</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card" data-category="hot-coffee">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Americano</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹130</span>
+              </div>
+              <p class="menu-item-desc">Double espresso gently diluted with filtered hot water for an aromatic, velvety smooth cup.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Hot Coffee</span>
+                <span class="menu-badge-subtle">Clean &amp; Rich</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card menu-item-has-thumb" data-category="hot-coffee">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Cappuccino</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹160</span>
+              </div>
+              <p class="menu-item-desc">Harmonious thirds of bold espresso, sweet steamed milk, and a cloud of velvety dense foam.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Hot Coffee</span>
+                <span class="menu-badge-subtle highlight">House Classic</span>
+              </div>
+            </div>
+            <div class="menu-item-thumb">
+              <img 
+                src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=300&q=80" 
+                alt="Cappuccino with dense microfoam" 
+                loading="lazy" 
+                width="64" 
+                height="64"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card" data-category="hot-coffee">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Café Latte</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹180</span>
+              </div>
+              <p class="menu-item-desc">Signature double shot gently poured through micro-textured steamed milk with delicate hand-poured art.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Hot Coffee</span>
+                <span class="menu-badge-subtle">Barista Special</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card" data-category="hot-coffee">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Mocha</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹200</span>
+              </div>
+              <p class="menu-item-desc">Decadent blend of artisan espresso, artisanal dark Belgian cocoa, and velvety whole milk.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Hot Coffee</span>
+                <span class="menu-badge-subtle">Indulgent &amp; Sweet</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ICED DRINKS (3 items) -->
+          <article class="menu-item-row menu-card" data-category="iced-drinks">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Iced Americano</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹150</span>
+              </div>
+              <p class="menu-item-desc">Crisp double shot shaken over crystal-clear artisan ice cubes and topped with chilled mountain water.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Iced Drinks</span>
+                <span class="menu-badge-subtle">Invigorating</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card menu-item-has-thumb" data-category="iced-drinks">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Iced Vanilla Brew</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹190</span>
+              </div>
+              <p class="menu-item-desc">Slow-steeped cold brew infused with whole Madagascar vanilla beans and silky oat or dairy milk.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Iced Drinks</span>
+                <span class="menu-badge-subtle highlight">Customer Favourite</span>
+              </div>
+            </div>
+            <div class="menu-item-thumb">
+              <img 
+                src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=300&q=80" 
+                alt="Iced Vanilla Brew in chilled glass" 
+                loading="lazy" 
+                width="64" 
+                height="64"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card" data-category="iced-drinks">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Caramel Iced Latte</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹210</span>
+              </div>
+              <p class="menu-item-desc">Chilled espresso over creamy cold milk and a buttery sea-salt caramel swirl over clear ice.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Iced Drinks</span>
+                <span class="menu-badge-subtle">Sweet Chill</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TEA & REFRESHERS (3 items) -->
+          <article class="menu-item-row menu-card" data-category="tea-refreshers">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Masala Chai</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹80</span>
+              </div>
+              <p class="menu-item-desc">Slow-simmered Assam whole leaf tea infused with freshly pounded ginger, green cardamom, and cinnamon.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Tea &amp; Refreshers</span>
+                <span class="menu-badge-subtle">Traditional &amp; Warm</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card" data-category="tea-refreshers">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Green Tea</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹100</span>
+              </div>
+              <p class="menu-item-desc">Delicate high-altitude green tea leaves brewed with gentle floral undertones and natural antioxidants.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Tea &amp; Refreshers</span>
+                <span class="menu-badge-subtle">Soothing</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card menu-item-has-thumb" data-category="tea-refreshers">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Lemon Iced Tea</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹130</span>
+              </div>
+              <p class="menu-item-desc">Handcrafted black tea chilled over crushed ice with freshly squeezed citrus and garden mint.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Tea &amp; Refreshers</span>
+                <span class="menu-badge-subtle highlight">Zesty &amp; Crisp</span>
+              </div>
+            </div>
+            <div class="menu-item-thumb">
+              <img 
+                src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=300&q=80" 
+                alt="Lemon Iced Tea with mint" 
+                loading="lazy" 
+                width="64" 
+                height="64"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+            </div>
+          </article>
+
+          <!-- BAKERY & DESSERTS (4 items) -->
+          <article class="menu-item-row menu-card" data-category="bakery-desserts">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Butter Croissant</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹120</span>
+              </div>
+              <p class="menu-item-desc">Traditional French pastry laminated with French butter for an ultra-flaky, golden honeycomb crumb.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Bakery &amp; Desserts</span>
+                <span class="menu-badge-subtle">Oven Fresh</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card" data-category="bakery-desserts">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Chocolate Brownie</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹140</span>
+              </div>
+              <p class="menu-item-desc">Dense, fudgy 70% dark chocolate square topped with fine sea-salt flakes and walnuts.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Bakery &amp; Desserts</span>
+                <span class="menu-badge-subtle">Fudge Centre</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card menu-item-has-thumb" data-category="bakery-desserts">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Chocolate Hazelnut Croissant</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹150</span>
+              </div>
+              <p class="menu-item-desc">Buttery layered dough stuffed with roasted hazelnut praline and molten bittersweet chocolate.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Bakery &amp; Desserts</span>
+                <span class="menu-badge-subtle highlight">Chef Recommended</span>
+              </div>
+            </div>
+            <div class="menu-item-thumb">
+              <img 
+                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=300&q=80" 
+                alt="Flaky Chocolate Croissant" 
+                loading="lazy" 
+                width="64" 
+                height="64"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+            </div>
+          </article>
+
+          <article class="menu-item-row menu-card" data-category="bakery-desserts">
+            <div class="menu-item-main">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Classic Cheesecake</h3>
+                <span class="menu-item-dots" aria-hidden="true"></span>
+                <span class="menu-item-price">₹190</span>
+              </div>
+              <p class="menu-item-desc">Slow-baked New York style cream cheesecake resting on a buttery toasted biscuit crust.</p>
+              <div class="menu-item-meta">
+                <span class="menu-tag">Bakery &amp; Desserts</span>
+                <span class="menu-badge-subtle">Velvety Slice</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Café Experience Section -->
+    <section class="section experience-section" id="experience">
+      <div class="section-container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-eyebrow">The Atmosphere</span>
+          <h2 class="section-title">The Brew &amp; Bloom Experience</h2>
+          <p class="section-subtitle">Imagine a slower morning, the aroma of freshly brewed coffee, and a cozy corner made for meaningful moments. Brew &amp; Bloom is a café concept inspired by the simple pleasure of good coffee and good company.</p>
+        </div>
+
+        <!-- 3 Feature Cards -->
+        <div class="experience-features-grid">
+          <div class="feature-card reveal-fade-up" style="--stagger: 0.1s;">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">A Cozy Corner</h3>
+            <p class="feature-desc">Warm interiors and comfortable seating for a little time to yourself.</p>
+          </div>
+
+          <div class="feature-card reveal-fade-up" style="--stagger: 0.2s;">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Crafted with Care</h3>
+            <p class="feature-desc">Every cup is prepared with attention, quality ingredients, and care.</p>
+          </div>
+
+          <div class="feature-card reveal-fade-up" style="--stagger: 0.3s;">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Your Everyday Escape</h3>
+            <p class="feature-desc">A welcoming place to catch up with friends, study, or enjoy a quiet moment.</p>
+          </div>
+        </div>
+
+        <!-- Photographic Gallery (Curated Realistic Editorial Grid) -->
+        <div class="gallery-wrapper reveal-fade-up">
+          <div class="gallery-subheading">
+            <span class="gallery-label">Life Inside Brew &amp; Bloom</span>
+            <span class="gallery-hint">Click any photograph to view enlarged</span>
+          </div>
+
+          <div class="gallery-grid" id="gallery-grid">
+            <!-- Image 1: Premium Café Interior (Large Wide Feature) -->
+            <figure class="gallery-item gallery-item-wide" tabindex="0" role="button" aria-label="View photo: Premium Café Interior" data-caption="Artisan Coffee Bar &amp; Sunlit Dining — Natural oak tables, gentle daylight, and a welcoming specialty coffee bar designed for slow mornings.">
+              <img 
+                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" 
+                alt="Sunlit specialty café interior with oak tables, comfortable chairs, and pendant lighting"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <figcaption class="gallery-overlay">
+                <span class="gallery-caption-title">Artisan Coffee Bar &amp; Dining</span>
+                <span class="gallery-caption-sub">Natural oak tables, morning daylight, and peaceful acoustics</span>
+              </figcaption>
+            </figure>
+
+            <!-- Image 2: Coffee Craftsmanship -->
+            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Coffee Craftsmanship" data-caption="Coffee Craftsmanship — Calibrated extraction yielding deep caramel tones and velvety crema.">
+              <img 
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" 
+                alt="Barista extracting rich espresso from portafilter with golden crema"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <figcaption class="gallery-overlay">
+                <span class="gallery-caption-title">Coffee Craftsmanship</span>
+                <span class="gallery-caption-sub">Calibrated extraction and artisanal roasts</span>
+              </figcaption>
+            </figure>
+
+            <!-- Image 3: Fresh Pastries -->
+            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Fresh Morning Bakery" data-caption="Fresh Morning Bakery — Flaky butter croissants and oven-warm treats proofed daily.">
+              <img 
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" 
+                alt="Display of freshly baked crusty pastries and golden croissants on a wooden counter"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <figcaption class="gallery-overlay">
+                <span class="gallery-caption-title">Fresh Pastries</span>
+                <span class="gallery-caption-sub">Golden flaky layers baked fresh daily</span>
+              </figcaption>
+            </figure>
+
+            <!-- Image 4: Cozy Seating Area -->
+            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Cozy Seating Corner" data-caption="Cozy Seating Corner — A quiet window nook curated for reading, focus, and contemplation.">
+              <img 
+                src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" 
+                alt="Cozy café armchair corner with natural wood bookshelf and soft lighting"
+                loading="lazy"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+              >
+              <figcaption class="gallery-overlay">
+                <span class="gallery-caption-title">Cozy Nook</span>
+                <span class="gallery-caption-sub">Soft armchairs and warm natural light</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Transparency Notice -->
+          <div class="gallery-concept-note">
+            <small>☕ <strong>Design Concept Note:</strong> Brew &amp; Bloom is a fictional specialty café concept created for a portfolio design assignment. Photography illustrates the intended architectural atmosphere and artisanal coffee ethos.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Testimonials Section -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="section-container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-eyebrow">Warm Impressions</span>
+          <h2 class="section-title">Kind Words, Warm Cups.</h2>
+          <p class="section-subtitle">Stories and smiles from our neighborhood coffee lovers.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card reveal-fade-up" style="--stagger: 0.1s;">
+            <div class="quote-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <div class="star-rating" aria-label="5 out of 5 stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "My favourite place to slow down and enjoy a beautifully made latte."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AR</div>
+              <div class="author-meta">
+                <cite class="author-name">Ananya R.</cite>
+                <span class="author-role">Regular Guest &bull; Architect</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card reveal-fade-up" style="--stagger: 0.2s;">
+            <div class="quote-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <div class="star-rating" aria-label="5 out of 5 stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "The coffee, the pastries, and the atmosphere are all wonderful."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">RM</div>
+              <div class="author-meta">
+                <cite class="author-name">Rohan M.</cite>
+                <span class="author-role">Coffee Enthusiast &bull; Writer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card reveal-fade-up" style="--stagger: 0.3s;">
+            <div class="quote-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <div class="star-rating" aria-label="5 out of 5 stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              "A lovely little café for weekend catch-ups and quiet afternoons."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">MS</div>
+              <div class="author-meta">
+                <cite class="author-name">Meera S.</cite>
+                <span class="author-role">Graphic Designer &bull; Remote Worker</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fictional Demonstration Notice -->
+        <div class="demo-disclaimer-box reveal-fade-up">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="info-icon" aria-hidden="true">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          <p>Demonstration Content: Testimonials above are illustrative fictional representations created for portfolio demonstration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Table Reservation Section -->
+    <section class="section reservation-section" id="reservations">
+      <div class="section-container">
+        <div class="reservation-card-wrapper reveal-fade-up">
+          <div class="reservation-grid">
+            <!-- Left Info Panel -->
+            <div class="reservation-info-panel">
+              <span class="section-eyebrow light">Reservations</span>
+              <h2 class="reservation-title">Your Table Is Waiting.</h2>
+              <p class="reservation-subtitle">
+                Planning a coffee date, a catch-up, or a little celebration? Send us a reservation request.
+              </p>
+
+              <div class="reservation-perks">
+                <div class="perk-item">
+                  <div class="perk-check" aria-hidden="true">✓</div>
+                  <div>
+                    <strong>Peaceful Ambiance</strong>
+                    <p>Reserved corner table ready before you arrive.</p>
+                  </div>
+                </div>
+                <div class="perk-item">
+                  <div class="perk-check" aria-hidden="true">✓</div>
+                  <div>
+                    <strong>Artisan Tastings</strong>
+                    <p>Sample seasonal origin beans upon request.</p>
+                  </div>
+                </div>
+                <div class="perk-item">
+                  <div class="perk-check" aria-hidden="true">✓</div>
+                  <div>
+                    <strong>Complimentary Wi-Fi</strong>
+                    <p>Quiet zones with charging sockets for working sessions.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reservation-note-box">
+                <small><strong>Note:</strong> This form processes client-side demonstration requests. No backend server or email service is connected.</small>
+              </div>
+            </div>
+
+            <!-- Right Form Panel -->
+            <div class="reservation-form-panel">
+              <!-- Interactive Form -->
+              <form id="reservation-form" class="reservation-form" novalidate>
+                <div class="form-row">
+                  <!-- Full Name -->
+                  <div class="form-group">
+                    <label for="res-name" class="form-label">Full Name <span class="required-star">*</span></label>
+                    <input 
+                      type="text" 
+                      id="res-name" 
+                      name="name" 
+                      class="form-input" 
+                      placeholder="e.g. Priya Sharma" 
+                      required
+                      autocomplete="name"
+                    >
+                    <span class="form-error" id="name-error" role="alert"></span>
+                  </div>
+
+                  <!-- Email Address -->
+                  <div class="form-group">
+                    <label for="res-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                    <input 
+                      type="email" 
+                      id="res-email" 
+                      name="email" 
+                      class="form-input" 
+                      placeholder="priya@example.com" 
+                      required
+                      autocomplete="email"
+                    >
+                    <span class="form-error" id="email-error" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <!-- Phone Number -->
+                  <div class="form-group">
+                    <label for="res-phone" class="form-label">Phone Number <span class="required-star">*</span></label>
+                    <input 
+                      type="tel" 
+                      id="res-phone" 
+                      name="phone" 
+                      class="form-input" 
+                      placeholder="+91 98765 43210" 
+                      required
+                      autocomplete="tel"
+                    >
+                    <span class="form-error" id="phone-error" role="alert"></span>
+                  </div>
+
+                  <!-- Number of Guests -->
+                  <div class="form-group">
+                    <label for="res-guests" class="form-label">Number of Guests (1–12) <span class="required-star">*</span></label>
+                    <select id="res-guests" name="guests" class="form-select" required>
+                      <option value="" disabled selected>Select guest count</option>
+                      <option value="1">1 Person (Quiet corner)</option>
+                      <option value="2">2 Guests (Cozy table)</option>
+                      <option value="3">3 Guests (Window booth)</option>
+                      <option value="4">4 Guests (Café square)</option>
+                      <option value="5">5 Guests</option>
+                      <option value="6">6 Guests</option>
+                      <option value="7">7 Guests</option>
+                      <option value="8">8 Guests (Long wooden table)</option>
+                      <option value="9">9 Guests</option>
+                      <option value="10">10 Guests</option>
+                      <option value="11">11 Guests</option>
+                      <option value="12">12 Guests (Large gathering)</option>
+                    </select>
+                    <span class="form-error" id="guests-error" role="alert"></span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <!-- Reservation Date -->
+                  <div class="form-group">
+                    <label for="res-date" class="form-label">Reservation Date <span class="required-star">*</span></label>
+                    <input 
+                      type="date" 
+                      id="res-date" 
+                      name="date" 
+                      class="form-input" 
+                      required
+                    >
+                    <span class="form-error" id="date-error" role="alert"></span>
+                  </div>
+
+                  <!-- Preferred Time -->
+                  <div class="form-group">
+                    <label for="res-time" class="form-label">Preferred Time <span class="required-star">*</span></label>
+                    <select id="res-time" name="time" class="form-select" required>
+                      <option value="" disabled selected>Choose a time slot</option>
+                      <optgroup label="Morning Coffee (8 AM - 12 PM)">
+                        <option value="08:30 AM">08:30 AM</option>
+                        <option value="09:00 AM">09:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                      </optgroup>
+                      <optgroup label="Afternoon Brews (12 PM - 5 PM)">
+                        <option value="12:30 PM">12:30 PM</option>
+                        <option value="01:30 PM">01:30 PM</option>
+                        <option value="03:00 PM">03:00 PM</option>
+                        <option value="04:30 PM">04:30 PM</option>
+                      </optgroup>
+                      <optgroup label="Evening Unwind (5 PM - 9 PM)">
+                        <option value="05:30 PM">05:30 PM</option>
+                        <option value="06:30 PM">06:30 PM</option>
+                        <option value="07:30 PM">07:30 PM</option>
+                        <option value="08:15 PM">08:15 PM</option>
+                      </optgroup>
+                    </select>
+                    <span class="form-error" id="time-error" role="alert"></span>
+                  </div>
+                </div>
+
+                <!-- Special Requests -->
+                <div class="form-group">
+                  <label for="res-notes" class="form-label">Special Requests <span class="optional-label">(Optional)</span></label>
+                  <textarea 
+                    id="res-notes" 
+                    name="notes" 
+                    class="form-textarea" 
+                    rows="3" 
+                    placeholder="E.g., Window seat preferred, oat milk preference, celebrate an anniversary..."
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block submit-btn" id="submit-res-btn">
+                  <span>Send Reservation Request</span>
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="btn-arrow" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+              </form>
+
+              <!-- Confirmation Card (Hidden by default, shown on successful submission) -->
+              <div id="reservation-confirmation" class="reservation-confirmation" style="display: none;" role="status">
+                <div class="confirmation-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <h3 class="confirmation-title">Request Received!</h3>
+                <p class="confirmation-intro">
+                  Thank you, <strong id="conf-guest-name">Guest</strong>! Your demo reservation request has been created.
+                </p>
+
+                <div class="confirmation-details-box">
+                  <div class="conf-row">
+                    <span class="conf-label">Date:</span>
+                    <span class="conf-val" id="conf-date">—</span>
+                  </div>
+                  <div class="conf-row">
+                    <span class="conf-label">Time:</span>
+                    <span class="conf-val" id="conf-time">—</span>
+                  </div>
+                  <div class="conf-row">
+                    <span class="conf-label">Party Size:</span>
+                    <span class="conf-val" id="conf-guests">—</span>
+                  </div>
+                  <div class="conf-row">
+                    <span class="conf-label">Contact:</span>
+                    <span class="conf-val" id="conf-contact">—</span>
+                  </div>
+                  <div class="conf-row" id="conf-notes-row" style="display:none;">
+                    <span class="conf-label">Special Notes:</span>
+                    <span class="conf-val" id="conf-notes">—</span>
+                  </div>
+                </div>
+
+                <div class="confirmation-disclaimer">
+                  <p><strong>Demo Mode Notice:</strong> This is a frontend demonstration. The reservation request has not been sent to an email server or saved to a database.</p>
+                </div>
+
+                <button type="button" class="btn btn-secondary btn-block" id="reset-res-btn">
+                  Make Another Reservation Request
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Visit Us and Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-eyebrow">Find Our Café</span>
+          <h2 class="section-title">Come On In.</h2>
+          <p class="section-subtitle">We would love to brew something warm and delicious for you.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact & Hours Details Card -->
+          <div class="contact-info-card reveal-fade-right">
+            <div class="contact-brand-header">
+              <h3 class="contact-brand-title">Brew &amp; Bloom</h3>
+              <p class="contact-brand-tag">Specialty Coffee &amp; Artisan Bakery</p>
+            </div>
+
+            <div class="contact-detail-items">
+              <!-- Address -->
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <strong class="item-title">Address</strong>
+                  <p>123 Coffee Lane, Pune, Maharashtra</p>
+                  <span class="demo-tag">Demonstration Location</span>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <strong class="item-title">Phone</strong>
+                  <p><a href="tel:+919000012345" class="contact-link">+91 90000 12345</a></p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <strong class="item-title">Email</strong>
+                  <p><a href="mailto:hello@brewandbloom.example" class="contact-link">hello@brewandbloom.example</a></p>
+                </div>
+              </div>
+
+              <!-- Opening Hours -->
+              <div class="contact-item hours-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-item-text">
+                  <strong class="item-title">Opening Hours</strong>
+                  <div class="hours-schedule">
+                    <div class="hours-row">
+                      <span>Monday – Friday:</span>
+                      <strong>8:00 AM – 9:00 PM</strong>
+                    </div>
+                    <div class="hours-row">
+                      <span>Saturday – Sunday:</span>
+                      <strong>9:00 AM – 10:00 PM</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Demo Links -->
+            <div class="contact-social-section">
+              <span class="social-header-label">Connect on Social (Demo Links)</span>
+              <div class="social-links-row">
+                <a href="#hero" class="social-icon-btn" aria-label="Brew and Bloom on Instagram (Demo)" title="Instagram Demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="#hero" class="social-icon-btn" aria-label="Brew and Bloom on Facebook (Demo)" title="Facebook Demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="#hero" class="social-icon-btn" aria-label="Brew and Bloom on X / Twitter (Demo)" title="X / Twitter Demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                  </svg>
+                </a>
+                <a href="#hero" class="social-icon-btn" aria-label="Brew and Bloom on Pinterest (Demo)" title="Pinterest Demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M12 2a10 10 0 0 0-3.6 19.34c.15-.85.28-2.15.06-3.08-.2-.84-1.3-5.53-1.3-5.53s-.33-.67-.33-1.66c0-1.55.9-2.7 2.02-2.7.95 0 1.41.71 1.41 1.57 0 .96-.61 2.4-1 3.73-.26 1.13.56 2.06 1.67 2.06 2 0 3.37-2.58 3.37-5.63 0-2.32-1.56-4.04-4.38-4.04-3.19 0-5.18 2.37-5.18 5.04 0 .91.27 1.55.69 2.06.19.23.22.33.15.6-.05.22-.17.7-.22.9-.07.28-.27.38-.5.25-1.42-.66-2.08-2.42-2.08-4.39 0-3.26 2.75-7.18 8.21-7.18 4.38 0 7.28 3.17 7.28 6.6 0 4.5-2.51 7.84-6.2 7.84-1.24 0-2.4-.67-2.8-1.44l-.76 3.06c-.28 1.08-.98 2.42-1.48 3.23A10 10 0 1 0 12 2z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Container -->
+          <div class="contact-map-card reveal-fade-left">
+            <div class="map-wrapper">
+              <iframe 
+                title="Café location map in Pune, Maharashtra" 
+                class="location-map" 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=73.8400%2C18.5100%2C73.8900%2C18.5500&amp;layer=mapnik&amp;marker=18.5300%2C73.8650"
+                loading="lazy">
+              </iframe>
+              <div class="map-overlay-badge">
+                <div class="pin-icon" aria-hidden="true">📍</div>
+                <div class="pin-info">
+                  <strong>Brew &amp; Bloom</strong>
+                  <span>123 Coffee Lane, Pune (Demo Pin)</span>
+                </div>
+              </div>
+            </div>
+            <div class="map-caption">
+              <small>📍 Interactive demo map preview of central Pune, Maharashtra. Fictional location for project demonstration.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 12. Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="section-container footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-logo">
+            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <path d="M12 16C12 14.8954 12.8954 14 14 14H24C25.1046 14 26 14.8954 26 16V22C26 25.3137 23.3137 28 20 28V28C16.6863 28 14 25.3137 14 22V16H12Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M26 17H27.5C28.8807 17 30 18.1193 30 19.5V19.5C30 20.8807 28.8807 22 27.5 22H26" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M11 30H29" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <span class="footer-brand-name">Brew &amp; Bloom</span>
+          </div>
+          <p class="footer-tagline">"Good Coffee. Slow Moments."</p>
+          <p class="footer-editorial-quote">
+            "Made for coffee lovers, slow mornings, and beautiful little moments."
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#signature">Signature Favourites</a></li>
+            <li><a href="#menu">Digital Menu</a></li>
+            <li><a href="#experience">Café Experience</a></li>
+            <li><a href="#reservations">Table Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Hours & Contact -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Visit</h4>
+          <p class="footer-info-line">123 Coffee Lane, Pune, Maharashtra</p>
+          <p class="footer-info-line">
+            <a href="tel:+919000012345" class="footer-link">+91 90000 12345</a>
+          </p>
+          <p class="footer-info-line">
+            <a href="mailto:hello@brewandbloom.example" class="footer-link">hello@brewandbloom.example</a>
+          </p>
+          <div class="footer-hours-block">
+            <strong>Mon – Fri:</strong> 8:00 AM – 9:00 PM<br>
+            <strong>Sat – Sun:</strong> 9:00 AM – 10:00 PM
+          </div>
+        </div>
+
+        <!-- Col 4: Stay Connected & Reservation Prompt -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Slow Down With Us</h4>
+          <p class="footer-desc">Looking to reserve a special spot or enjoy our seasonal blends?</p>
+          <a href="#reservations" class="btn btn-primary btn-block footer-cta">Reserve a Table</a>
+          <div class="footer-social-row">
+            <a href="#hero" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#hero" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#hero" class="footer-social-link" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Back to Top -->
+    <div class="footer-bottom">
+      <div class="section-container footer-bottom-inner">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Brew &amp; Bloom. All rights reserved. Fictional specialty café design concept.
+        </p>
+        <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 20 20" fill="currentColor" class="top-icon" aria-hidden="true">
+            <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Gallery Images -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Enlarged photo preview" style="display: none;">
+    <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close image lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" id="lightbox-image">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Story Philosophy Modal -->
+  <div class="story-modal-overlay" id="story-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="story-modal-title" style="display: none;">
+    <div class="story-modal-card">
+      <button class="story-modal-close" id="story-modal-close" aria-label="Close story dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="story-modal-body">
+        <span class="section-eyebrow">The Brew &amp; Bloom Chronicle</span>
+        <h3 id="story-modal-title" class="story-modal-heading">The Art of Slowing Down</h3>
+        <p>In a world rushing through morning notifications and rapid commutes, Brew &amp; Bloom was conceived as an intentional pause. We believe the ritual of coffee is more than caffeine—it is a tactile conversation between bean, water, heat, and time.</p>
+        <p>Our beans are selected from single-estate farmers practicing ethical regenerative cultivation. Every roast profile is calibrated by our master baristas to unveil delicate terroir notes of jasmine blossom, stone fruit, and dark roasted cocoa.</p>
+        <div class="story-modal-quote">
+          "Good coffee requires patience. Meaningful memories require room to breathe."
+        </div>
+        <p>We invite you to sit by our sun-drenched windows, savor a warm pastry, and rediscover the beauty of unhurried mornings.</p>
+      </div>
+      <div class="story-modal-footer">
+        <a href="#reservations" class="btn btn-primary" id="modal-reserve-btn">Reserve Your Spot</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button class="floating-back-to-top" id="floating-back-to-top" aria-label="Scroll back to top of page" title="Back to top">
+    <svg viewBox="0 0 20 20" fill="currentColor" class="floating-top-icon" aria-hidden="true">
+      <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/>
+    </svg>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
